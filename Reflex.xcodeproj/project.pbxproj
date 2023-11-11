@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FF468232AFFE4C40061E560 /* FLEX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FF468222AFFE4C40061E560 /* FLEX.framework */; };
 		C30D29862620020B00D89649 /* Reflex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D297C2620020B00D89649 /* Reflex.framework */; };
 		C30D298D2620020B00D89649 /* Reflex.h in Headers */ = {isa = PBXBuildFile; fileRef = C30D297F2620020B00D89649 /* Reflex.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3442AB02624D62800693972 /* SampleTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3442AAF2624D62800693972 /* SampleTypes.swift */; };
@@ -17,7 +18,6 @@
 		C34879FA2725FE6600815379 /* FLEXSwiftMetadatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34879F92725FE6600815379 /* FLEXSwiftMetadatas.swift */; };
 		C3570319272BD341002DCB53 /* FLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3570318272BD341002DCB53 /* FLExtensions.swift */; };
 		C357BA242819C4B500FFFC96 /* FLEX in Frameworks */ = {isa = PBXBuildFile; productRef = C357BA232819C4B500FFFC96 /* FLEX */; };
-		C38D976428192424008709D0 /* libflex.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C3FBA5472741ACE700FBD76E /* libflex.tbd */; };
 		C38D976B2819246E008709D0 /* FLEXSwiftMirror.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3442AC12624D83700693972 /* FLEXSwiftMirror.swift */; };
 		C38D976C2819246E008709D0 /* FLEXSwiftMetadatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34879F92725FE6600815379 /* FLEXSwiftMetadatas.swift */; };
 		C38D976D2819246E008709D0 /* EchoExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34879E72725118000815379 /* EchoExtensions.swift */; };
@@ -39,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6FF468222AFFE4C40061E560 /* FLEX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FLEX.framework; sourceTree = "<group>"; };
 		C30D297C2620020B00D89649 /* Reflex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Reflex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C30D297F2620020B00D89649 /* Reflex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reflex.h; sourceTree = "<group>"; };
 		C30D29802620020B00D89649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		C3EA55C526279A7E007611C8 /* ReflexTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReflexTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		C3EA55C626279A7E007611C8 /* ReflexObjcTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReflexObjcTests.h; sourceTree = "<group>"; };
 		C3EA55C726279A7E007611C8 /* ReflexObjcTests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ReflexObjcTests.mm; sourceTree = "<group>"; };
-		C3FBA5472741ACE700FBD76E /* libflex.tbd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text-based-dylib-definition"; path = libflex.tbd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C38D976428192424008709D0 /* libflex.tbd in Frameworks */,
 				C3C30E3A282B64B400AC586A /* Echo in Frameworks */,
+				6FF468232AFFE4C40061E560 /* FLEX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +91,7 @@
 		C30D29722620020B00D89649 = {
 			isa = PBXGroup;
 			children = (
-				C3FBA5472741ACE700FBD76E /* libflex.tbd */,
+				6FF468222AFFE4C40061E560 /* FLEX.framework */,
 				C30D297E2620020B00D89649 /* Reflex */,
 				C30D29892620020B00D89649 /* ReflexTests */,
 				C30D297D2620020B00D89649 /* Products */,
@@ -583,6 +583,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = /opt/theos/vendor/include/libflex;
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -608,6 +612,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = /opt/theos/vendor/include/libflex;
 				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
