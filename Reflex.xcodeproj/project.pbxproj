@@ -685,9 +685,9 @@
 		};
 		C3C30E28282B63D200AC586A /* XCRemoteSwiftPackageReference "Echo" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/NSExceptional/Echo";
+			repositoryURL = "https://github.com/NyaMisty/Echo";
 			requirement = {
-				branch = main;
+				branch = patch-1;
 				kind = branch;
 			};
 		};
